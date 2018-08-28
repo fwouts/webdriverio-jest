@@ -30,7 +30,7 @@ BROWSER_NAME=MicrosoftEdge npm test
 
 # Running with Chrome headless
 
-Simply set the `HEADLESS` environment variable:
+Simply set the `HEADLESS` environment variable to `1`:
 ```
 HEADLESS=1 npm test
 ```
