@@ -54,7 +54,7 @@ afterEach(async () => {
 
 const GITHUB_ISSUE_TITLE_SELECTOR = "*=Issue #2052";
 const GITHUB_COMMENT_SELECTOR =
-  "*=Here is a minimal example of a WebdriverIO test written with the Jest framework:";
+  "p*=Here is a minimal example of a WebdriverIO test written with the Jest framework:";
 
 describe("Google", () => {
   it("can search on Google", async () => {
