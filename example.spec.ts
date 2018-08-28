@@ -1,11 +1,12 @@
+import { ChildProcess } from "child_process";
 import * as selenium from "selenium-standalone";
 import * as webdriverio from "webdriverio";
 
 // We expect the test to take a while, by nature.
 jest.setTimeout(60000);
 
-let seleniumProcess;
-let browser;
+let seleniumProcess: ChildProcess;
+let browser: webdriverio.Client<any>;
 
 beforeAll(async () => {
   // Install Selenium if required.
@@ -13,7 +14,7 @@ beforeAll(async () => {
     selenium.install(resolve);
   });
   // Start Selenium server.
-  seleniumProcess = await new Promise((resolve, reject) =>
+  seleniumProcess = await new Promise<ChildProcess>((resolve, reject) =>
     selenium.start((error, childProcess) => {
       if (error) {
         reject(error);
@@ -65,7 +66,8 @@ describe("Google", () => {
     // Wait until the search field is visible.
     await browser.waitForVisible(GOOGLE_SEARCH_INPUT_SELECTOR);
     // Start typing. No need to click on the search field, as it should be automatically focused.
-    await browser.keys("WebdriverIO Jest");
+    // Note: TypeScript definitions complain incorrectly of keys() not returning a promise.
+    await (browser.keys("WebdriverIO Jest") as any);
     // Click search.
     await browser.click(GOOGLE_SEARCH_BUTTON_SELECTOR);
     // Wait until we find the relevant GitHub issue.

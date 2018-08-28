@@ -2,13 +2,30 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "\\.(test|spec)\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
   "dependencies": {
     "@types/jest": "^23.3.1",
+    "@types/node": "^10.9.3",
     "@types/selenium-standalone": "^6.15.0",
     "@types/webdriverio": "^4.10.3",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.5.0",
     "selenium-standalone": "^6.15.2",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.1",
     "webdriverio": "^4.13.2"
   }
 }
