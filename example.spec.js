@@ -53,7 +53,7 @@ afterEach(async () => {
 });
 
 const GOOGLE_SEARCH_INPUT_SELECTOR = `input[name="q"]`;
-const GOOGLE_SEARCH_BUTTON_SELECTOR = `input*=Google Search`;
+const GOOGLE_SEARCH_BUTTON_SELECTOR = `input=Google Search`;
 const GITHUB_ISSUE_TITLE_SELECTOR = "*=Issue #2052";
 const GITHUB_COMMENT_SELECTOR =
   "p*=Here is a minimal example of a WebdriverIO test written with the Jest framework:";
@@ -66,8 +66,6 @@ describe("Google", () => {
     await browser.waitForVisible(GOOGLE_SEARCH_INPUT_SELECTOR);
     // Start typing. No need to click on the search field, as it should be automatically focused.
     await browser.keys("WebdriverIO Jest");
-    // Wait for search button to be ready.
-    await browser.waitForEnabled(GOOGLE_SEARCH_BUTTON_SELECTOR);
     // Click search.
     await browser.click(GOOGLE_SEARCH_BUTTON_SELECTOR);
     // Wait until we find the relevant GitHub issue.
