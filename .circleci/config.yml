@@ -20,4 +20,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: BROWSER_NAME=chrome HEADLESS=1 npm test
+      - run: HEADLESS=1 npm test
+      - run: BROWSER_NAME=chrome npm test
+      - run: BROWSER_NAME=firefox npm test
