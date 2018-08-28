@@ -1,6 +1,6 @@
 # WebdriverIO with Jest
 
-[![CircleCI](https://circleci.com/gh/zenclabs/webdriverio-jest.svg?style=svg)](https://circleci.com/gh/zenclabs/webdriverio-jest)
+[![CircleCI](https://circleci.com/gh/zenclabs/webdriverio-jest/tree/typescript.svg?style=svg)](https://circleci.com/gh/zenclabs/webdriverio-jest/tree/typescript)
 
 This is the simplest possible example of a WebdriverIO test written with the Jest framework.
 
