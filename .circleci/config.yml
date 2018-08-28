@@ -16,7 +16,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run: yarn install
-      - run: selenium-standalone install
+      - run: ./node_modules/.bin/selenium-standalone install
       - save_cache:
           paths:
             - node_modules
