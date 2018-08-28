@@ -53,7 +53,7 @@ afterEach(async () => {
 });
 
 const GOOGLE_SEARCH_INPUT_SELECTOR = `input[name="q"]`;
-const GOOGLE_SEARCH_BUTTON_SELECTOR = `input[type="submit"]`;
+const GOOGLE_SEARCH_BUTTON_SELECTOR = `input*=Google Search`;
 const GITHUB_ISSUE_TITLE_SELECTOR = "*=Issue #2052";
 const GITHUB_COMMENT_SELECTOR =
   "p*=Here is a minimal example of a WebdriverIO test written with the Jest framework:";
