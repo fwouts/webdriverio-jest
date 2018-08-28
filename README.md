@@ -4,8 +4,7 @@ This is the simplest possible example of a WebdriverIO test written with the Jes
 
 Because WebdriverIO doesn't support Jest as a first-class citizen, this test suite leverages the
 WebdriverIO remote API. This means that we need to do a few things ourselves, such as starting up
-Selenium server as well as the browser. It also means that we must to use `async`/`await`
-statements.
+Selenium server as well as the browser. It also means that we must use `async`/`await` statements.
 
 ## How to use it
 
