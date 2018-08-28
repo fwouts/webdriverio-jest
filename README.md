@@ -34,3 +34,8 @@ Simply set the `HEADLESS` environment variable to `1`:
 ```
 HEADLESS=1 npm test
 ```
+
+# TypeScript
+
+Check out the [typescript branch](https://github.com/zenclabs/webdriverio-jest/tree/typescript)
+for the equivalent test written in TypeScript.
