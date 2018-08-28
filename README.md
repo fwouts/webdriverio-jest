@@ -20,16 +20,16 @@ The browser is chosen based on the `BROWSER_NAME` environment variable, defaulti
 
 Examples:
 ```
-BROWSER_NAME=chrome yarn test
-BROWSER_NAME=safari yarn test
-BROWSER_NAME=firefox yarn test
-BROWSER_NAME="internet explorer" yarn test
-BROWSER_NAME=MicrosoftEdge yarn test
+BROWSER_NAME=chrome npm test
+BROWSER_NAME=safari npm test
+BROWSER_NAME=firefox npm test
+BROWSER_NAME="internet explorer" npm test
+BROWSER_NAME=MicrosoftEdge npm test
 ```
 
 # Running with Chrome headless
 
 Simply set the `HEADLESS` environment variable:
 ```
-HEADLESS=1 yarn test
+HEADLESS=1 npm test
 ```
